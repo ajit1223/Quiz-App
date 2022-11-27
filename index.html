@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="top-div custom-box">
+        <div class="logo"><img src="testbooklogo.jpg" alt=""></div>
+        <h1>Hello User!</h1>
+        <h3>Enter your Name to contineue the Quiz</h3>
+             <div class="options">
+                
+                <input type="text" placeholder="Enter Your Name..." id="username" name="username"></input>
+                <button class="btn" type="submit" onclick="submitname()">Enter</button>
+            
+            </div>
+        </div>
+    <div class="home-box custom-box hide">
+        <div class="bottomdiv" id="option-container">
+            <!-- <hr width="100%" size="5" color="grey"> -->
+            <h1>Select Cetogory</h1>
+            <div class="btn-grid">
+                <button class="btn btn-option" id="Pipes" onclick="startQuiz()">Pipes And Cisterns</button>
+                <button class="btn btn-option" id="Propbability" onclick="startQuiz()">Propbability</button>
+                <button class="btn btn-option" id="Ages" onclick="startQuiz()">Problem On Ages</button>
+                <button class="btn btn-option" id="Profit"onclick="startQuiz()">Profit And Loss</button>
+            </div>
+        </div>
+        <p>total number of Question:<span class="total-question">10</span></p>
+        </div>
+    <div class="quiz-box custom-box hide">
+        <div class="header">
+        <div class="question-number">
+            </div>
+            <div id="timer"> time left</div>
+        </div>
+            <div class="quesiton-text">
+                
+            </div>
+            <div class="option-container">
+                
+            </div>
+            <div class="next-question-btn">
+                <div type="button"class="btn" onclick="next()">Next</div>                
+            </div>
+            <div class="answers-indicator" id="score">
+                <div class=""></div>
+                <div class=""></div>
+                <div class=""></div>
+                <div class=""></div>
+                <div class=""></div>                
+            </div>
+    </div>
+
+    <div class="result-box custom-box hide">
+        <h1>Quiz Result</h1>
+        <table>
+            <tr>
+                <td> Name</td>
+                <td><span  class="resultusername"></span></td>
+            </tr>
+            <tr>
+                <td>Total time taken</td>
+                <td><span class="total-time"></span></td>
+            </tr>
+            <tr>
+                <td>Tatal Question</td>
+                <td><span class="total-question"></span></td>
+            </tr>
+            <tr>
+                <td>Attempt</td>
+                <td><span class="total-Attempt"></span></td>
+            </tr>
+            <tr>
+                <td>Tatal Correct</td>
+                <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+                <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+                <td>percentage</td>
+                <td><span class="percentage"></span></td>
+            </tr>
+           
+        </table>
+        <button type="button" class="btn" onclick="tryAgainQuiz()" >Start Again</button>
+        <button type="button" class="btn" onclick="goToHome()">Go To Home</button>
+    </div>
+    <script src="/script.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>
